@@ -12,6 +12,7 @@ int bin(int a[], int l,int r,int val)
         else if(a[m]<val)
         {l=m+1;}
     }
+    return -2;
 }
 
 void main()
