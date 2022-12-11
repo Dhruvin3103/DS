@@ -32,6 +32,10 @@ void main()
         printf("\nWant to enter key(press 1) : ");
         scanf("%d",&c);
     }
-    for(int i=0;i<n;i++){printf("|%d",h[i]);}
-    printf("|");
+    for(int i=0;i<n;i++)
+    {
+    if(h[i]!=-1)
+    {printf("|%d",h[i]);}
+    else{printf("|NULL");}
+    }printf("|");
 }
