@@ -19,7 +19,7 @@ j--;
 int small(int a[],int p, int n)
 {
     int small = a[p],pos;
-    for(int i = p;i<n;i++)
+    for(int i = p+1 ;i<n;i++)
     {
         if(a[i]<small)
         {
