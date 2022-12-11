@@ -23,9 +23,7 @@ void delete()
     else
     {
         printf("popped : %d",a[f]);
-        f++;
-        if(f>r)
-        {f=r=-1;}
+
     }
 }
 

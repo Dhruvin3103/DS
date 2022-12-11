@@ -15,7 +15,6 @@ int part(int a[],int l,int h)
 }
 
 
-
 void quicksort(int a[],int l,int h)
 {
     if(l<h)
@@ -25,9 +24,6 @@ void quicksort(int a[],int l,int h)
         quicksort(a,j+1,h);
     }
 }
-
-
-
 
 void main()
 {

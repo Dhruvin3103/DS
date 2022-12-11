@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define Max 5
+#define Max 10
 int f=-1;
 int r=-1;
 int a[Max];
@@ -69,10 +69,10 @@ void main()
             scanf("%d",&a[i][j]);
         }
     }
-    
+
     for(int i=0;i<n;i++)
     {v[i]=0;}
-
+// v[i] = 0,0,0,0,0,0...
     for(int i=0;i<n;i++)
     {
         printf("\n");
@@ -81,11 +81,12 @@ void main()
            printf(" %d ",a[i][j]);
         }
     }
+
     printf("\nvertex : ");
-    // scanf("%d",&i);
-    printf("%d",i);
+    scanf("%d",&i);
+    printf("%d ",i);//soucrre
     v[i] = 1;
-    insert(i);
+    insert(i);//inserting in queue
     while(isempty() != -10)
     {
         int node = delete();
@@ -95,12 +96,9 @@ void main()
         {
             if(a[node][j] == 1 && v[j] == 0)
             {
-                printf("%d", j);
+                printf("%d ", j);//remaing  bfs
                 v[j] = 1;
                 insert(j);
             }
         }
-    }
-
-
-}
+    }}

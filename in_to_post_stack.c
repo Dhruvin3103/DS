@@ -38,20 +38,19 @@ int main()
     int i=0;
     while(exp[i]!='\0')
     {
-        
         if(isalnum(exp[i]))
-            printf("%c",exp[i]);
+            printf("%c ",exp[i]);
         else if(exp[i] == '(')
             push(exp[i]);
         else if(exp[i]==')')
         {
             while((x = pop())!= '(')
-            {printf("%c",x);}
+            {printf("%c ",x);}
         }
         else 
         {
             while(prio(exp[i])<= prio(s[top]))
-                printf("%c",pop());
+                printf("%c ",pop());
             push(exp[i]);
         }
         i++;
