@@ -4,7 +4,9 @@ void hash(int h[], int k, int i, int n)
 {
     int j;
     j = (k%n+i)%n;
-    if(h[j]==-1){h[j] = k;}
+    if(i>n)
+    {printf("Sorry i cant do any thing :(");}
+    else if(h[j]==-1){h[j] = k;}
     else if(h[j]!=-1)
     {hash(h,k,i+1,n);}
     else 
