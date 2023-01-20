@@ -6,18 +6,21 @@ void DFS(int a[100][100] ,int v[], int s,int n)
     int top = -1,i;
     printf("%d\n",s);
     v[s]=1;
-    stack[++top]=s;
+    //  1  1  1  0 
+//      0  0  1  0 
+//      1  0  0  0 
+//      0  1  0  0 
+    stack[++top]=s;//PUDSH
     while(top != -1)
     {
         s = stack[top--];
+        printf("%d",s);
         for(i=0; i<n;i++)
         {
             if(a[s][i]==1 && v[i]==0)
             {
-                stack[++top]= i;
-                printf("%d\n",i);
-                v[i]=1;
-                break;
+                stack[++top]= i;//PUSH
+                v[i]=1;// VIS MEW 1
             }
         }
     
@@ -53,6 +56,11 @@ void main()
         printf("\n");
     }
 
-    DFS(a,v,2,n);
+    DFS(a,v,0,n);
     // printf("Over ");
 }
+
+//  1  1  1  0 
+//  0  0  1  0 
+//  1  0  0  0 
+//  0  1  0  0 
