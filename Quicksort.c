@@ -3,13 +3,15 @@
 int part(int a[],int l,int h)
 {
     int p = a[h];//pivot
-    int i=l-1;
+    int i=l;
+    // printf("%d",i);
         for(int j=l;j<h;j++)
         {
-            if(a[j]<=p){i++;int temp=a[i];a[i]=a[j];a[j]=temp;}
+            if(a[j]<=p)
+            {int temp=a[i];a[i]=a[j];a[j]=temp;i++;}//swapping i and j 
         }
-        int t2=a[i+1];a[i+1]=a[h];a[h]=t2;
-        return i+1;
+        int t2=a[i];a[i]=a[h];a[h]=t2; //swapping I and h
+        return i;
         
 
 }
